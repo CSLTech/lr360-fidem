@@ -1,0 +1,7 @@
+{
+    "baseFunds": 200,
+    "ballCount": 50,
+    "ticketPrize": 10,
+    "totalPrizeRatio": 0.5,
+    "winnerRatios": [0.75, 0.15, 0.1]
+}

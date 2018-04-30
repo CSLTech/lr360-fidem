@@ -1,0 +1,58 @@
+{
+  "name": "lr360-fidem",
+  "version": "0.0.1",
+  "description": "Fidem Lottery test for LR360",
+  "main": "index.js",
+  "scripts": {
+    "start": "node bin/index.js",
+    "test": "nyc mocha"
+  },
+  "nyc": {
+    "all": true,
+    "cache": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CSLTech/lr360-fidem.git"
+  },
+  "keywords": [
+    "fidem"
+  ],
+  "author": "Michaël St-Georges <m.stgeorges@gmail.com>",
+  "license": "Beerware",
+  "bugs": {
+    "url": "https://github.com/CSLTech/lr360-fidem/issues"
+  },
+  "homepage": "https://github.com/CSLTech/lr360-fidem#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^4.19.1",
+    "lint-staged": "^7.0.5",
+    "mocha": "^5.1.1",
+    "nyc": "^11.7.1",
+    "proxyquire": "^2.0.1",
+    "sinon": "^4.5.0",
+    "sinon-chai": "^3.0.0"
+  },
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "bluebird": "^3.5.1",
+    "ordinal": "^1.0.2",
+    "random-number-csprng": "^1.0.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "pre-commit": [
+    "lint-staged"
+  ],
+  "bin": "./bin/index.js"
+}
